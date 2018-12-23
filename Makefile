@@ -12,4 +12,5 @@ make:
 	@echo "run 'bin/getsetdb' to start a shell"
 
 clean:
-	rm build/*
+	find build/ ! -wholename 'build/.gitkeep' -type f -exec rm -f {} +
+
